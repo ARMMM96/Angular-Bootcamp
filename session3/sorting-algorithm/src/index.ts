@@ -6,7 +6,7 @@ import { ListNode } from './ListNode';
 
 // Example usage for Array:
 const arraySorter = new ArraySorter();
-const array = [4, 2, 7, 1, 3];
+const array = [4, 2, 7, 1, -3];
 
 console.log('Original Array:');
 console.log(array);
@@ -18,7 +18,7 @@ console.log(sortedArray);
 
 // Example usage for String:
 const stringSorter = new StringSorter();
-const string = 'dcba';
+const string = 'PoaJb';
 
 console.log('Original String:');
 console.log(string);
@@ -33,7 +33,7 @@ console.log(sortedString);
 const node1 = new ListNode(4);
 const node2 = new ListNode(2);
 const node3 = new ListNode(1);
-const node4 = new ListNode(3);
+const node4 = new ListNode(-3);
 
 node1.next = node2;
 node2.next = node3;
