@@ -1,6 +1,7 @@
+import { Sorter } from './Sorter';
 import { ListNode } from './ListNode';
 
-export class LinkedListSorter {
+export class LinkedListSorter extends Sorter<ListNode | null> {
 	// Function to sort the linked list using merge sort
 	sort(head: ListNode | null): ListNode | null {
 		if (!head || !head.next) {
