@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" class="mt-4">
+<form (ngSubmit)="onSubmit()" class="mt-4" #investmentForm="ngForm">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
@@ -9,7 +9,13 @@
           name="initialInvestment"
           type="number"
           class="form-control"
-          required />
+          required
+          min="1"
+          #initialInvestment="ngModel" />
+        <div *ngIf="initialInvestment.invalid && (initialInvestment.dirty || initialInvestment.touched)" class="text-danger">
+          <div *ngIf="initialInvestment.errors?.['required']">Initial Investment is required.</div>
+          <div *ngIf="initialInvestment.errors?.['min']">Initial Investment must be at least 1.</div>
+        </div>
       </div>
     </div>
     <div class="col-md-6">
@@ -21,7 +27,13 @@
           name="annualInvestment"
           type="number"
           class="form-control"
-          required />
+          required
+          min="1"
+          #annualInvestment="ngModel" />
+        <div *ngIf="annualInvestment.invalid && (annualInvestment.dirty || annualInvestment.touched)" class="text-danger">
+          <div *ngIf="annualInvestment.errors?.['required']">Annual Investment is required.</div>
+          <div *ngIf="annualInvestment.errors?.['min']">Annual Investment must be at least 1.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -36,7 +48,13 @@
           name="expectedReturn"
           type="number"
           class="form-control"
-          required />
+          required
+          min="1"
+          #expectedReturn="ngModel" />
+        <div *ngIf="expectedReturn.invalid && (expectedReturn.dirty || expectedReturn.touched)" class="text-danger">
+          <div *ngIf="expectedReturn.errors?.['required']">Expected Return is required.</div>
+          <div *ngIf="expectedReturn.errors?.['min']">Expected Return must be at least 1.</div>
+        </div>
       </div>
     </div>
     <div class="col-md-6">
@@ -48,12 +66,22 @@
           name="duration"
           type="number"
           class="form-control"
-          required />
+          required
+          min="1"
+          #duration="ngModel" />
+        <div *ngIf="duration.invalid && (duration.dirty || duration.touched)" class="text-danger">
+          <div *ngIf="duration.errors?.['required']">Duration is required.</div>
+          <div *ngIf="duration.errors?.['min']">Duration must be at least 1.</div>
+        </div>
       </div>
     </div>
   </div>
 
+  <div *ngIf="submissionError" class="text-danger text-center mt-3">
+    All values must be greater than or equal to 1.
+  </div>
+
   <div class="form-group text-center">
-    <button type="submit" class="btn btn-success mt-5">Calculate</button>
+    <button type="submit" class="btn btn-success mt-5" [disabled]="investmentForm.invalid">Calculate</button>
   </div>
 </form>
