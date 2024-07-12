@@ -1,0 +1,129 @@
+//Answer in English or Arabic ONLY:
+
+1- How to declare a variable in TypeScript?
+	- Use the let, const, or var keywords. 
+	- variable name.
+	- Data type.	
+	examples: 
+		const name: string = "ahmed"; 
+		let age: number = 28;
+		var job: string = "developer";  
+
+2-Name the access modifiers supported in TypeScript.
+	- public 	- private 	- protected	
+	
+3-What are import and export keywords in TypeScript?
+	-  import and export keywords are used to manage and share code between different files and modules.
+	-   import keyword is used to bring external modules, functions, variables, or classes into the current file, making them available for use. 
+	-  export keyword is used to make modules, functions, variables, or classes available to other files. It allows you to expose specific members of a module to be imported by other modules.
+
+4-How can a class constant be implemented in TypeScript?
+
+
+	- class constant can be implemented using the readonly property modifier.
+
+
+
+5-How to create objects in Typescript?
+
+	That can be done in several ways:
+
+	- Using Class Instantiation
+	- Using Interfaces
+	- Using Factory Functions
+	- Using Object.create
+
+6-Explain Different Data Types in Typescript?
+	
+	Primitive Data Types: Basic, immutable, directly represent values (number, string, boolean).
+	Non-Primitive Data Types: More complex, can store collections of values, often mutable (array, object, tuple).
+	User-Defined Data Types: Custom types created to model complex structures and logic (interface, type alias, union types, intersection types).
+
+
+
+7-Explain Tuples in Typescript With Example
+	Tuples in TypeScript are a fixed-length array where each element can have a specific type. 
+	They offer more flexibility than regular arrays by ensuring type safety for each position within the array.
+
+	// Declare a tuple type
+	let person: [string, number];
+
+	// Initialize it
+	person = ["Ahmed Rabie Mahmoud", 28]; // Valid initialization
+
+	// Accessing elements
+	console.log(person[0]); // Output: Ahmed Rabie Mahmoud
+	console.log(person[1]); // Output: 28
+
+8-What are Objects in TypeScript?
+
+	Objects in TypeScript are unordered collections of key-value pairs with optional type annotations for properties.
+
+9-Explain Classes in TypeScript
+	Classes in TypeScript provide a blueprint for creating objects with properties and methods, 
+	enabling object-oriented programming concepts such as encapsulation, inheritance, and polymorphism.
+
+10-What is String Interpolation in Angular?
+	String interpolation in Angular is the embedding of expressions within double curly braces ({{ }}) 
+	to dynamically display data values from component to template.
+
+11-What is an ngModule?
+		It's a class that decorates a module, 
+		providing metadata about the module, and is used to:
+				Declare a module
+				Import and export functionality
+				Configure the application
+				Provide a way to organize and structure the application
+				An NgModule typically consists of:
+
+		Declarations: 
+			A list of components, directives, and pipes that belong to the module
+			mports: A list of modules that the current module depends on
+
+		Exports:
+			 A list of components, directives, and pipes that can be used by other modules
+		Providers:
+			 A list of services that can be injected into the module
+
+		By using NgModules, you can:
+			Break down a large application into smaller, more manageable pieces
+			Reuse functionality across the application
+			Easily configure and customize the application
+
+12-What are Pipes in Angular? 
+
+	Pipes are a way to transform and format data in your templates.
+	Pipes are used in templates to format data, such as:
+		Dates and times
+		Currencies
+		Numbers
+		Strings
+
+13-What are Components in Angular?
+
+	In Angular, Components are the building blocks of an application's user interface, representing a 
+	single piece of the UI, such as a header, footer, or form, and consisting of a template, class, 
+	and metadata that define its structure, behavior, and interactions.
+
+14-What are Directives in Angular?
+
+	Directives in Angular are instructions for your templates, acting like a bridge between the HTML and your application logic. They come in three main types:
+
+	Component Directives: Reusable UI elements with templates, forming the building blocks of your application's interface.
+	Attribute Directives: Attach behavior or styles to existing HTML elements using attributes (*ngIf, *ngFor).
+	Structural Directives: Modify the DOM structure by adding, removing, or manipulating elements based on conditions (*ngIf, *ngFor).
+
+15-What are Single Page Applications (SPA)?
+
+	web applications that load a single HTML page and dynamically update the content
+	as users interact with the app, rather than loading multiple pages from a server, 
+	providing a smoth and responsive user experience.
+
+//===========================================================================================================================================
+Task Description:
+Your goal is to create an Investment Calculator where users can enter their initial investment amount, then their expected annual investment rate,their expected return and the duration.
+And then as a result, see how their investment is expected to develop.
+TheApp should have the following features:
+1-USE table to output the calculated investment results .
+2-You should use built-in pipes.
+//=========================================================================================================================================
