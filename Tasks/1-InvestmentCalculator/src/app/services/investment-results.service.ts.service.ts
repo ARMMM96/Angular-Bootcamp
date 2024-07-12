@@ -7,7 +7,7 @@ import { InvestmentResult } from '../interfaces/investment-results.interface';
 export class InvestmentResultsServiceTsService {
   constructor() {}
 
-  calculateInvestimentResults(investment: Investment): InvestmentResult[] {
+  calculateInvestmentResults(investment: Investment): InvestmentResult[] {
     const annualData: InvestmentResult[] = [];
     let investmentValue = investment.initialInvestment;
 
@@ -33,4 +33,6 @@ export class InvestmentResultsServiceTsService {
 
     return annualData;
   }
+
+
 }

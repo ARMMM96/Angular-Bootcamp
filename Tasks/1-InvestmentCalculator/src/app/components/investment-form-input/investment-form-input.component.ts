@@ -35,7 +35,7 @@ export class InvestmentFormInputComponent {
     }
 
     this.submissionError = false;
-    let results = this.investmentResultsService.calculateInvestimentResults({
+    let results = this.investmentResultsService.calculateInvestmentResults({
       initialInvestment: this.enteredInitialInvestment,
       annualInvestment: this.enteredAnnualInvestment,
       expectedReturn: this.enteredExpectedReturn,
