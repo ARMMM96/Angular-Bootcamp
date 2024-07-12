@@ -7,11 +7,17 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<header></header>
-<main class="container mt-4">
-  <button type="button" class="btn btn-primary">Primary</button>
-</main>
+<app-header></app-header>
+<main class="container mt-5">
+<div class="mt-5 mb-5"></div>
 
+<app-investment-form-input (send)="showInvestmentResults($event)"></app-investment-form-input>
+
+<div class="mt-5 mb-5"></div>
+<app-investment-output-table [data]="investmentData"></app-investment-output-table>
+
+</main>
+<app-footer></app-footer>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
@@ -19,6 +25,5 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 
 <router-outlet />

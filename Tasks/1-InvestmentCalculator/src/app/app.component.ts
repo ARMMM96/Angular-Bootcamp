@@ -4,6 +4,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { InvestmentFormInputComponent } from './components/investment-form-input/investment-form-input.component';
 import { InvestmentOutputTableComponent } from './components/investment-output-table/investment-output-table.component';
+import { InvestmentResult } from './interfaces/investment-results.interface';
+
 
 @Component({
   selector: 'app-root',
@@ -19,5 +21,9 @@ import { InvestmentOutputTableComponent } from './components/investment-output-t
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Investment-Calculator';
+  investmentData!: InvestmentResult[];
+
+  showInvestmentResults(event: InvestmentResult[]) {
+    this.investmentData = event;
+  }
 }
